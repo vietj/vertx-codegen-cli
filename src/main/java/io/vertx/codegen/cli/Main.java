@@ -191,7 +191,9 @@ public class Main {
     if (target != null) {
       File targetFile = new File(target);
       if (!targetFile.exists()) {
-        throw new FileNotFoundException("Target dir " + target + " does not exists");
+        if (!targetFile.mkdirs()) {
+          throw new Exception("Coult not created target dir " + target);
+        }
       }
       if (!targetFile.isDirectory()) {
         throw new Exception("Target dir " + target + " must be a dir");
