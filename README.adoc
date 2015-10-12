@@ -6,6 +6,8 @@ A runner tool for Vert.x Codegen processing.
 
 Build with Maven : generates a fat jar `target/vertx-codegen-cli-3.2.0-SNAPSHOT.jar`
 
+or you can get the fatjar https://vietj.ci.cloudbees.com/job/vertx-codegen-cli/ws/target/[here]
+
 == Usage
 
 ```
