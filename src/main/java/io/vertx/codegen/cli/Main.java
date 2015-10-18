@@ -182,7 +182,7 @@ public class Main {
       URLClassLoader classLoader = (URLClassLoader) CodeGenProcessor.class.getClassLoader();
       Method addURL = URLClassLoader.class.getDeclaredMethod("addURL", URL.class);
       addURL.setAccessible(true);
-      addURL.invoke(classLoader, codegenFile.getParentFile().toURI().toURL());
+      addURL.invoke(classLoader, codegenFile.getAbsoluteFile().getParentFile().toURI().toURL());
     }
 
     // Builder options
